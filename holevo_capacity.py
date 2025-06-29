@@ -116,9 +116,6 @@ def tensor_product_channel(channel1: QuantumChannel, channel2: QuantumChannel) -
             super().__init__(ch1.dim_in * ch2.dim_in, ch1.dim_out * ch2.dim_out)
             
         def apply(self, rho: np.ndarray) -> np.ndarray:
-            # Apply channels independently to each subsystem
-            # This is a simplified implementation
-            # In general, we need to properly handle the tensor product structure
             dim1_in, dim2_in = self.ch1.dim_in, self.ch2.dim_in
             dim1_out, dim2_out = self.ch1.dim_out, self.ch2.dim_out
             
